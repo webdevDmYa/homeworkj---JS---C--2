@@ -39,7 +39,7 @@ xhr.onload = function () {
 			} else {
 				all[repaydate] = item.attraction;
 			}
-		}
+		}/*
 		if (repaydate < today) {
 			if (item.valcode == 'USD') {
 				item.attraction = item.attraction * 28;
@@ -54,7 +54,7 @@ xhr.onload = function () {
 			} else {
 				all[repaydate] = item.attraction;
 			}
-		}
+		}*/
 
 	}
 	for (let key in all) {
@@ -78,7 +78,14 @@ xhr.onload = function () {
 		}
 	*/
 
+	let summa = 0;
+
+	for (let item of arr) {
+		summa += item[1];
+
+	}
 	console.log(arr)
+	console.log(`долг України ${(summa / 10 ** 9).toFixed(2)} млрд грн от 2021.03.12`);
 
 
 
